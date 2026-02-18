@@ -1,6 +1,6 @@
-# Playwright Runner Chrome Extension
+# Automation Tool Chrome Extension
 
-The **Playwright Runner Chrome Extension** is a lightweight popup interface that connects to a **Python backend server** to manage and execute browser automation scripts with **Playwright**. It also allows launching **Playwright Codegen** sessions directly from your browser.
+The **Automation Tool Chrome Extension** is a lightweight popup interface that connects to a **Python backend server** to manage and execute browser automation scripts with **Playwright**. It also allows launching **Playwright Codegen** sessions directly from your browser.
 
 ---
 
