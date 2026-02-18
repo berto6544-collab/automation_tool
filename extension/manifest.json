@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Automation Tool",
+  "version": "1.0",
+
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "options_page": "options.html"
+}

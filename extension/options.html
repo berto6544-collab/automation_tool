@@ -1,0 +1,19 @@
+<input id="server" placeholder="http://localhost:8000">
+
+<button id="save">
+Save
+</button>
+
+<script>
+
+document.getElementById("save").onclick = () => {
+
+    const server = document.getElementById("server").value;
+
+    chrome.storage.local.set({
+        server
+    });
+
+};
+
+</script>
