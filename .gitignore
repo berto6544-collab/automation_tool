@@ -4,3 +4,4 @@ __pycache__/
 .bashrc
 # Ignore environment files
 .env
+.venv
