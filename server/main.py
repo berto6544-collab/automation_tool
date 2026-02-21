@@ -1,7 +1,7 @@
+from dotenv import load_dotenv
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 import subprocess
-from dotenv import load_dotenv
 import os
 import threading
 import time
@@ -13,7 +13,7 @@ load_dotenv()
 # =============================
 # CONFIG
 # =============================
-client = OpenAI(os.environ.get("OPENAI_API_KEY"))  # Replace with your OpenAI API key
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))  # Replace with your OpenAI API key
 
 SCRIPTS_DIR = "./recorded_scripts"
 
