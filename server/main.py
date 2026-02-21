@@ -10,7 +10,7 @@ from openai import OpenAI
 # =============================
 # CONFIG
 # =============================
-client = OpenAI()  # Replace with your OpenAI API key
+client = OpenAI(os.environ.get("OPENAI_API_KEY"))  # Replace with your OpenAI API key
 
 SCRIPTS_DIR = "./recorded_scripts"
 
