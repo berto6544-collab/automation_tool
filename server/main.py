@@ -1,12 +1,15 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 import subprocess
+from dotenv import load_dotenv
 import os
 import threading
 import time
 
 from openai import OpenAI
 
+
+load_dotenv()
 # =============================
 # CONFIG
 # =============================
