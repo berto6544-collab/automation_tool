@@ -10,10 +10,8 @@ from openai import OpenAI
 
 
 load_dotenv()
-# =============================
 # CONFIG
-# =============================
-client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))  # Replace with your OpenAI API key
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))  # Replace with your OpenAI API key Create a .env file
 
 SCRIPTS_DIR = "./recorded_scripts"
 
@@ -26,9 +24,8 @@ ALLOWED_ORIGINS = [
 
 os.makedirs(SCRIPTS_DIR, exist_ok=True)
 
-# =============================
+
 # FASTAPI INIT
-# =============================
 app = FastAPI()
 
 app.add_middleware(
@@ -39,9 +36,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# =============================
+
 # AI DOCUMENTATION FUNCTION
-# =============================
 def generate_ai_documentation(script_name: str):
     script_path = os.path.join(SCRIPTS_DIR, f"{script_name}.py")
     doc_path = os.path.join(SCRIPTS_DIR, f"{script_name}_DOC.md")
@@ -114,9 +110,8 @@ SCRIPT:
     print(f"Documentation created: {doc_path}")
     return True
 
-# =============================
+
 # PLAYWRIGHT FUNCTIONS
-# =============================
 def launch_playwright_codegen(script_name: str, url: str):
     path = os.path.join(SCRIPTS_DIR, f"{script_name}.py")
     print(f"Launching Playwright codegen for {script_name} at {url}...")
@@ -147,9 +142,8 @@ def run_script_file(script_name: str):
         return True
     return False
 
-# =============================
+
 # API ENDPOINTS
-# =============================
 @app.get("/")
 def root():
     return {"status": "Playwright Script Server Running with AI"}
